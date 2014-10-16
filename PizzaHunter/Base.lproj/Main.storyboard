@@ -16,18 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CKS-7R-8cV">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CKS-7R-8cV">
                                 <rect key="frame" x="0.0" y="64" width="600" height="264"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="dxX-Z8-BvY"/>
                                 </connections>
                             </mapView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWt-3n-yJw">
-                                <rect key="frame" x="0.0" y="328" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Pizza" id="GKG-Vj-2ZM"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gHo-gm-GvF">
                                 <rect key="frame" x="0.0" y="372" width="600" height="228"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,18 +57,24 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="V8x-uq-GyP"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X66-jN-BHr">
+                                <rect key="frame" x="0.0" y="327" width="600" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98860033504838996" green="0.93083631943881584" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="gHo-gm-GvF" firstAttribute="top" secondItem="eWt-3n-yJw" secondAttribute="bottom" id="6bZ-xs-Eju"/>
                             <constraint firstItem="gHo-gm-GvF" firstAttribute="leading" secondItem="2fi-mo-0CV" secondAttribute="leading" id="8Ws-SO-QeD"/>
-                            <constraint firstItem="eWt-3n-yJw" firstAttribute="leading" secondItem="2fi-mo-0CV" secondAttribute="leading" id="LSf-NT-yVx"/>
-                            <constraint firstItem="eWt-3n-yJw" firstAttribute="top" secondItem="CKS-7R-8cV" secondAttribute="bottom" id="PxD-8j-Mwb"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="X66-jN-BHr" secondAttribute="bottom" constant="226" id="Dzt-ku-dQk"/>
+                            <constraint firstItem="X66-jN-BHr" firstAttribute="leading" secondItem="gHo-gm-GvF" secondAttribute="leading" id="J0T-QZ-v23"/>
                             <constraint firstItem="gHo-gm-GvF" firstAttribute="trailing" secondItem="2fi-mo-0CV" secondAttribute="trailing" id="UbB-J8-8cg"/>
+                            <constraint firstItem="X66-jN-BHr" firstAttribute="trailing" secondItem="2fi-mo-0CV" secondAttribute="trailing" id="Vqn-AB-QVr"/>
                             <constraint firstItem="CKS-7R-8cV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="ZIq-bf-lJh"/>
                             <constraint firstItem="CKS-7R-8cV" firstAttribute="trailing" secondItem="jyV-Pf-zRb" secondAttribute="trailing" id="aX8-1K-7Pa"/>
+                            <constraint firstItem="X66-jN-BHr" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="263" id="lV4-qx-J1l"/>
                             <constraint firstItem="CKS-7R-8cV" firstAttribute="leading" secondItem="jyV-Pf-zRb" secondAttribute="leading" id="odR-SG-b9k"/>
-                            <constraint firstItem="gHo-gm-GvF" firstAttribute="trailing" secondItem="eWt-3n-yJw" secondAttribute="trailing" id="tLG-gD-wto"/>
                             <constraint firstItem="gHo-gm-GvF" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="xPg-WS-Ytf"/>
                         </constraints>
                     </view>
